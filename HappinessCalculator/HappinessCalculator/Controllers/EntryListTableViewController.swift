@@ -52,5 +52,8 @@ extension EntryListTableViewController: EntryTableViewCellDelegate {
         guard let indexPath = tableView.indexPath(for: cell), let entry = cell.entry else {return}
         
         EntryController.updateEntry(entry: entry)
+        updateAverageHappiness()
+        cell.updateUI(averageHappiness: averageHappiness)
+        
     }
 }
