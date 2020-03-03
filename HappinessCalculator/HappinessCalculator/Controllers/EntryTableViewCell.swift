@@ -34,8 +34,8 @@ class EntryTableViewCell: UITableViewCell {
         guard let entry = entry else {return}
         titleLabel.text = entry.title
         isEnabledSwitch.isOn = entry.isIncluded
+        higherOrLowerLabel.text = entry.happiness >= averageHappiness ? "Higher" : "Lower"
         
-        // Update HigherOrLowerLabel after notifications
         
     }
     
